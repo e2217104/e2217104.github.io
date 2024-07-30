@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kawamura taketo">
+    <meta name="keywords" content="html, css, javascript">
+    <link rel="stylesheet" href="./css/Form.css">
+    <title>河村剛人のHP</title>
+    <style>
+        table, tr, th, td {
+            border: 1px solid black; /* 例として境界線のスタイルを指定 */
+        }
+        /* 追加のスタイルやスクリプトはここに追加 */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>かわむらたけとのホームページ</h1>
+        <nav>
+            <a href="main.html">TOP</a>
+            <a href="info.html" target="_self">おしらせ</a>
+            <a href="introduction.html">自己紹介</a>
+            <a href="nikki.html">日記</a>
+            <a href="question.html" target="_self">問い合わせ</a>
+        </nav>
+    </header>
+    <div>
+       <h2>問い合わせ</h2>
+       <form action="submit_form.php" method="post">
+        <div class="Form">
+            <div class="Form-Item">
+              <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+              <input type="text" name="name" class="Form-Item-Input" placeholder="例）山田太郎" required>
+            </div>
+            <div class="Form-Item">
+              <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
+              <input type="tel" name="phone" class="Form-Item-Input" placeholder="例）000-0000-0000" required>
+            </div>
+            <div class="Form-Item">
+              <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+              <input type="email" name="email" class="Form-Item-Input" placeholder="例）example@gmail.com" required>
+            </div>
+            <div class="Form-Item">
+              <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+              <textarea name="message" class="Form-Item-Textarea" required></textarea>
+            </div>
+            <input type="submit" class="Form-Btn" value="送信する">
+          </div>
+        </form>
+    </div>
+    <footer>
+        Copyright &copy; Kawamura Taketo, All Right Reserved.
+    </footer>
+</body>
+</html>
